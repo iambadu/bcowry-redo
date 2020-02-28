@@ -10,11 +10,6 @@ ul li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 /* Navigation */
 .topnav {
   z-index: 100;
@@ -519,4 +514,35 @@ ul.social li {
 
 nav.footnav ul li {
   padding: 0 0.5rem !important;
+}
+
+.pagination {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination .page-numbers {
+  border-radius: 3px;
+  font-weight: bold;
+  background: #01579b;
+  color: #fff;
+  display: inline-block;
+  width: auto;
+  margin: 4px 4px 4px 0;
+  padding: 12px 18px;
+  text-decoration: none;
+}
+
+.pagination .page-numbers:hover {
+  background: #1d2a36;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination .current {
+  background: #1d2a36;
+  color: #fff;
+  padding: 12px 18px;
 }

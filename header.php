@@ -43,4 +43,4 @@
 
 </nav>
 
-<div id="content" class="hmintro site-content">
+<div id="content" class="text-gray-800 hmintro site-content">

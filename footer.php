@@ -18,7 +18,7 @@
         <div class="logo flex justify-center">
           <a href="#"><img src="<?php echo get_template_directory_uri()?>/img/logo.svg" alt="" /></a>
         </div>
-        <nav class="footnav mx-auto">
+        <nav class="footnav text-white mx-auto">
         <?php 
 		wp_nav_menu(
 			array(

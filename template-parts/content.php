@@ -13,21 +13,31 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="tracking-normal font-bold leading-tight text-3xl md:text-5xl my-4">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				bcowry_posted_on();
-				bcowry_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+			the_title( '<h2 class="tracking-normal font-bold leading-tight text-3xl md:text-5xl mb-4"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif; ?>
+		
+		  <div class="my-2 text-xs sm:text-sm flex items-center">
+            <?php echo get_avatar( get_the_author_email(), '40', '', '', array( 'class' => array( 'rounded-full', 'mr-4' ))); ?>
+              <div class="">
+                <p class="font-semibold text-gray-900 leading-none">
+                  <?php echo get_the_author(); ?>
+                </p>
+                <p class="text-gray-700"><time class="entry-date published" datetime="<?php echo get_the_date( DATE_W3C )?>"><?php echo get_the_date()?></time></p>			
+			  </div>
+			 <?php if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) { ?>
+				<div class="ml-2">
+					<p class="font-semibold text-gray-900 leading-none">
+					Edited on:
+					</p>
+					<p class="font-normal text-gray-700"><time class="entry-date published" datetime="<?php echo  get_the_modified_date( DATE_W3C )?>"><?php echo  get_the_modified_date()?></time></p>
+				</div>
+			<?php } ?>	
+			</div>	
+			
+			
+	</header>
 
 	<?php bcowry_post_thumbnail(); ?>
 
@@ -46,10 +56,6 @@
 			get_the_title()
 		) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bcowry' ),
-			'after'  => '</div>',
-		) );
 		?>
 	</div><!-- .entry-content -->
 

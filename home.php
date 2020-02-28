@@ -19,7 +19,7 @@
             coders, strategists and designers who are obessessed with making
             your brand grow.
             </p>
-            <a class="  text-base shadow rounded inline-block px-6 py-3 mt-4 uppercase font-bold bg-red-600" href="#">Learn
+            <a class="hover:bg-red-800 text-white text-base shadow rounded inline-block px-6 py-3 mt-4 uppercase font-bold bg-red-600" href="#">Learn
             more</a>
         </div>
     </section>
@@ -68,7 +68,7 @@
 
       <div class="relative w-full md:w-1/2">
         <a href="<?php the_permalink() ?>">
-          <span class="absolute bg-black opacity-50 inset-0"></span>
+          <span class="duration-200 transition-opacity hover:opacity-25 absolute bg-black opacity-50 inset-0"></span>
           <?php the_post_thumbnail('port-thumb', 'class=w-auto')?>
           <p class="text-lg  font-semibold z-20 absolute bottom-0 right-0 uppercase bg-white text-gray-800 px-4 py-2">
             <?php the_title() ?>
@@ -150,7 +150,7 @@ endwhile;
               </a>
           
             <div class="my-2 flex items-center">
-            <?php echo get_avatar( get_the_author_email(), '40', $default, $alt, array( 'class' => array( 'rounded-full', 'mr-4' ))); ?>
+            <?php echo get_avatar( get_the_author_email(), '40', '', '', array( 'class' => array( 'rounded-full', 'mr-4' ))); ?>
               <div class="text-sm">
                 <p class="font-semibold text-gray-900 leading-none">
                   <?php echo get_the_author(); ?>

@@ -62,7 +62,7 @@ if ( ! function_exists( 'bcowry_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'bcowry' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bcowry' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="bg-gray-200 border-2 text-gray-900">' . esc_html__( 'Posted in %1$s', 'bcowry' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
@@ -126,18 +126,19 @@ if ( ! function_exists( 'bcowry_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+			<div ">
+				<?php the_post_thumbnail('port-thumb', 'class=block rounded-md my-4'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
+			the_post_thumbnail( 'port-thumb', 
+			array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
-				) ),
+				)),
 			) );
 			?>
 		</a>
