@@ -27,7 +27,8 @@ if ( ! function_exists( 'bcowry_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-		add_image_size( 'port-thumb', 'auto', 'auto', false );
+		add_image_size( 'port-thumb', '1024', 'auto', false );
+		add_image_size( 'port-main', '1669', 'auto', false );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -89,20 +90,6 @@ if ( ! function_exists( 'bcowry_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bcowry_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function bcowry_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'bcowry_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'bcowry_content_width', 0 );
 
 /**
  * Register widget area.
@@ -132,7 +119,7 @@ function bcowry_scripts() {
 
 	wp_enqueue_style( 'bcowry-nav', get_template_directory_uri() . '/css/nav.css', array(), " " );
 
-	wp_enqueue_script( 'bcowry-navigation', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
+	wp_enqueue_script( 'bcowry-navigation', get_template_directory_uri() . '/js/script.js', array(), 1.0, true );
 
 	wp_enqueue_script( 'bcowry-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

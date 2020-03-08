@@ -546,3 +546,108 @@ nav.footnav ul li {
   color: #fff;
   padding: 12px 18px;
 }
+.wpcf7-form::placeholder {
+  color: #1d2a36;
+}
+.wpcf7 * {
+  box-sizing: border-box;
+}
+.wpcf7 select,
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea {
+  background-color: #f5f3f3;
+  width: 100%;
+  color: #000;
+  border-radius: 3px;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.wpcf7 input:not('submit'):focus,
+.wpcf7 textarea:focus {
+  background-color: #fff;
+}
+
+.wpcf7-submit {
+  font-size: 0.9rem;
+  padding: 16px 60px;
+}
+::placeholder {
+  color: #111111 !important;
+}
+
+/* Custom select */
+
+.cust-options {
+  color: #111111;
+  border-radius: 3px;
+  margin: 8px 0;
+  display: block;
+  width: 100%;
+  position: relative;
+  font-family: Arial;
+}
+
+.cust-options select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 16px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-color: #e53e3e transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #e53e3e transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div {
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  color: #fff;
+  background-color: #e53e3e;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}

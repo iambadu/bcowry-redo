@@ -3,7 +3,7 @@
   <!-- MAIN PAGE -->
   <section>
     <div class="mx-auto container">
-      <div class="py-10 mx-auto px-6 w-full md:w-3/4 ">
+      <div class="py-10 mx-auto mt-6 px-6 w-full md:w-3/4 ">
         <h2 class=" leading-snug text-lg sm:text-xl md:text-2xl ">
           We’re are team of curious professionals that are obsessed with creating brands and digital experiences that
           get results.

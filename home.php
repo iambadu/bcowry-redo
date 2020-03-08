@@ -66,21 +66,20 @@
           $posts->the_post();
       ?>
 
-      <div class="relative w-full md:w-1/2">
+      <div class="port-grid relative w-full md:w-1/2">
         <a href="<?php the_permalink() ?>">
-          <span class="duration-200 transition-opacity hover:opacity-25 absolute bg-black opacity-50 inset-0"></span>
-          <?php the_post_thumbnail('port-thumb', 'class=w-auto')?>
-          <p class="text-lg  font-semibold z-20 absolute bottom-0 right-0 uppercase bg-white text-gray-800 px-4 py-2">
-            <?php the_title() ?>
-          </p>
+          <div class="port-overlay">
+            <span class="port-caption text-lg md:text-2xl"><strong class="text-2xl"><?php the_title() ?></strong></span>
+      </div>
         </a>
+          <?php the_post_thumbnail('port-thumb', 'class=w-auto')?>
       </div>
     
               <?php
 endwhile;
  wp_reset_postdata();
  ?>
-      <a class="hover:bg-gray-800 hover:text-white text-gray-800 my-6 mx-auto text-center sm:w-1/2 lg:w-1/4 rounded-md font-semibold text-lg  px-6 py-2 border-solid block border-gray-800 border-4 bg-transparent uppercase"
+      <a class="hover:bg-gray-800 hover:text-white text-gray-800 my-6 mx-auto text-center sm:w-1/2 lg:w-64 rounded-md font-semibold text-base px-4 py-2 border-solid block border-gray-800 border-4 bg-transparent uppercase"
         href="">see recent work</a>
     </div>
   </section>
