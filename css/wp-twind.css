@@ -656,6 +656,10 @@ video {
   margin-bottom: 15px;
 }
 
+.port-desc p {
+  margin-bottom: 10px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

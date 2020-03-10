@@ -32,4 +32,7 @@
   display: block;
   margin-bottom: 15px;
 }
+.port-desc p {
+  margin-bottom: 14px;
+}
 @tailwind utilities;

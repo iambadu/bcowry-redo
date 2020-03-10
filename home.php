@@ -159,40 +159,6 @@ endwhile;
             </div>
           </div>
         </div>
-        <!-- <div class="w-full md:w-1/2 lg:w-1/3">
-          <div class="text-gray-800 p-3 md:px-6 rounded-lg bg-white shadow mb-6 mt-24 mx-2">
-            <img class="shadow-lg rounded-lg -mt-20 block mx-auto w-11/12 " src="<?php echo get_template_directory_uri()?>/img/imgbta.jpg" alt="" />
-            <h2 class="leading-tight py-3 text-gray-800 font-bold text-xl md:text-2xl ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h2>
-            <div class="my-2 flex items-center">
-              <img class="w-10 h-10 rounded-full mr-4" src="<?php echo get_template_directory_uri()?>/img/sarpong2.jpg" alt="Avatar of Kwabena Badu" />
-              <div class="text-sm">
-                <p class="font-semibold text-gray-900 leading-none">
-                  Kwabena Badu
-                </p>
-                <p class="text-gray-600">Aug 18</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 lg:w-1/3">
-          <div class="text-gray-800 p-3 md:px-6 rounded-lg bg-white shadow mb-6 mt-24 mx-2">
-            <img class="shadow-lg rounded-lg -mt-20 block mx-auto w-11/12 " src="<?php echo get_template_directory_uri()?>/img/imgbta.jpg" alt="" />
-            <h2 class="leading-tight py-3 text-gray-800 font-bold text-xl md:text-2xl ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h2>
-            <div class="my-2 flex items-center">
-              <img class="w-10 h-10 rounded-full mr-4" src="<?php echo get_template_directory_uri()?>/img/sarpong2.jpg" alt="Avatar of Kwabena Badu" />
-              <div class="text-sm">
-                <p class="font-semibold text-gray-900 leading-none">
-                  Kwabena Badu
-                </p>
-                <p class="text-gray-600">Aug 18</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
             <?php
 endwhile;
