@@ -2,35 +2,34 @@
 <div class="div">
 
 </div>
-  <section>
+<section>
     <div class="flex flex-wrap overflow-hidden pb-4">
 
-            <?php
+      <?php
       // The Query
-      $posts = new WP_Query(array(
-          'post_type' => 'portfolio',
-          'posts_per_page' => '4',
+      $posts_port = new WP_Query(array(
+          'post_type' => 'portfolio'
       ));
 
       // The Loop
-      while ( $posts->have_posts() ) :
-          $posts->the_post();
+      while ( $posts_port->have_posts() ) :
+          $posts_port->the_post();
       ?>
 
-      <div class="relative w-full md:w-1/2">
+      <div class="wow fadeInUp port-grid relative w-full md:w-1/2">
         <a href="<?php the_permalink() ?>">
-          <span class="duration-200 transition-opacity hover:opacity-25 absolute bg-black opacity-50 inset-0"></span>
-          <?php the_post_thumbnail('port-thumb', 'class=w-auto')?>
-          <p class="text-lg  font-semibold z-20 absolute bottom-0 right-0 uppercase bg-white text-gray-800 px-4 py-2">
-            <?php the_title() ?>
-          </p>
+          <div class="port-overlay">
+            <span class="port-caption text-lg md:text-2xl"><strong class="text-2xl"><?php the_title() ?></strong></span>
+          </div>
         </a>
+        <?php the_post_thumbnail('port-thumb', 'class=w-auto')?>
       </div>
-    
-              <?php
+
+      <?php
 endwhile;
- wp_reset_postdata();
+wp_reset_query(); 
  ?>
+
     </div>
   </section>
 

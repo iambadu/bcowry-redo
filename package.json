@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/tailwindbase.css -o css/wp-twind.css"
+    "build": "postcss css/tailwindbase.css -o css/newcss.css"
   },
   "repository": "https://github.com/iambadu/bcowry-redo.git",
   "author": "iambadu <baduplus@gmail.com>",

@@ -480,7 +480,7 @@ nav .menu.close li a {
 .logo {
   text-align: center;
   display: inline block;
-  padding: 10px;
+  padding: 10px 0;
 }
 .logo img {
   height: 30px;
@@ -546,36 +546,47 @@ nav.footnav ul li {
   color: #fff;
   padding: 12px 18px;
 }
-.wpcf7-form::placeholder {
-  color: #1d2a36;
+
+.nf-form-fields-required {
+  display: none;
 }
-.wpcf7 * {
-  box-sizing: border-box;
+.nf-field-element {
+  overflow: hidden;
 }
-.wpcf7 select,
-.wpcf7 input[type="text"],
-.wpcf7 input[type="email"],
-.wpcf7 input[type="tel"],
-.wpcf7 textarea {
-  background-color: #f5f3f3;
-  width: 100%;
-  color: #000;
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  background-color: #fff !important;
+  color: #111111 !important;
+  border: 1px solid #9c9c9c !important;
+  border-radius: 3px !important;
+  color: #111111 !important;
+}
+.nf-response-msg {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+/* .nf-form-content input:not([type="button"]) {
+  color: #111111 !important;
+  border: 1px solid #686868 !important;
+} */
+#nf-field-4 {
+  background-color: #bb2525 !important;
   border-radius: 3px;
-  margin: 8px 0;
-  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 25px;
+  padding-left: 25px;
 }
-
-.wpcf7 input:not('submit'):focus,
-.wpcf7 textarea:focus {
-  background-color: #fff;
-}
-
-.wpcf7-submit {
-  font-size: 0.9rem;
-  padding: 16px 60px;
+.nf-field-container {
+  margin-bottom: 18px !important;
 }
 ::placeholder {
-  color: #111111 !important;
+  /* font-weight: bold !important; */
+  color: #1f1f1f !important;
 }
 
 /* Custom select */

@@ -6,7 +6,8 @@
  *
  * @package bcowry
  */
-
+require_once( 'inc/cleanup.php' );
+// require_once( 'inc/custom-post.php' );
 if ( ! function_exists( 'bcowry_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -119,15 +120,30 @@ function bcowry_scripts() {
 
 	wp_enqueue_style( 'bcowry-nav', get_template_directory_uri() . '/css/nav.css', array(), " " );
 
+	wp_enqueue_style( 'bcowry-animate', get_template_directory_uri() . '/css/animate.css', array(), " " );
+
 	wp_enqueue_script( 'bcowry-navigation', get_template_directory_uri() . '/js/script.js', array(), 1.0, true );
 
-	wp_enqueue_script( 'bcowry-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'bcowry_scripts' );
+
+add_action('wp_enqueue_scripts', 'wow_init_footer');
+function wow_init_footer() {
+	add_action( 'print_footer_scripts', 'wow_init' );
+}
+ 
+
+//* Add JavaScript before </body>
+function wow_init() { ?>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+<?php } 
+
 
 
 require get_template_directory() . '/inc/custom-post.php';

@@ -1,5 +1,5 @@
 <?php
-function cptui_register_my_cpts_portfolio() {
+function customportfolio() {
 
 	/**
 	 * Post Type: Portfolio Items.
@@ -66,5 +66,5 @@ function cptui_register_my_cpts_portfolio() {
 	register_post_type( "portfolio", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts_portfolio' );
+add_action( 'init', 'customportfolio' );
 ?>
